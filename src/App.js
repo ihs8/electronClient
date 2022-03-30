@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Attribute from './components/attributeCRUD';
+import Brand from "./components/brandCRUD";
+import Category from "./components/categoryCRUD";
+import Groupe from './components/groupCRUD';
+import Order from './components/orderCRUD';
+import Product from './components/productCRUD';
+import Store from './components/storeCRUD';
+import User from './components/userCRUD';
+import Nav from './components/nav';
+import {Routes,Route} from "react-router-dom";
+import Company from "./components/companyCRUD";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav/>
+      <Routes>
+        <Route path='/attribute' element={<Attribute/>}/>
+        <Route path='/brand' element={<Brand/>}/>
+        <Route path='/category' element={<Category/>}/>
+        <Route path='/company' element={<Company/>}/>
+        <Route path='/group' element={<Groupe/>}/>
+        <Route path='/order' element={<Order/>}/>
+        <Route path='/product' element={<Product/>}/>
+        <Route path='/store' element={<Store/>}/>
+        <Route path='/user' element={<User/>}/>
+
+      </Routes>
+  
     </div>
   );
 }
