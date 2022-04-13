@@ -5,6 +5,9 @@ function Nav() {
     return(
         <div>
             <ul >
+            <li >
+                <Link to="/login">Login</Link>
+                </li>&nbsp;&nbsp;
                 <li >
                     <Link to="/attribute">Manage Attribute</Link>
                 </li>&nbsp;&nbsp;
